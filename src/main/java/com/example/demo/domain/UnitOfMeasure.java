@@ -11,7 +11,7 @@ public class UnitOfMeasure {
 
     @OneToOne
     private Ingredient ingredient;
-    private String unitOfMeasure;
+    private String description;
 
     public Long getId() {
         return id;
@@ -29,11 +29,11 @@ public class UnitOfMeasure {
         this.ingredient = ingredient;
     }
 
-    public String getUnitOfMeasure() {
-        return unitOfMeasure;
+    public String getDescription() {
+        return description;
     }
 
-    public void setUnitOfMeasure(String unitOfMeasure) {
-        this.unitOfMeasure = unitOfMeasure;
+    public void setDescription(String description) {
+        this.description = description;
     }
 }
