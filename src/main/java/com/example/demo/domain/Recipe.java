@@ -21,11 +21,22 @@ public class Recipe {
     @Lob
     private Byte[] image;
 
+    @Enumerated(value = EnumType.STRING)
+    private Difficulty difficulty;
+
     @OneToOne(cascade = CascadeType.ALL)
     private Notes notes;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "recipe")
     private Set<Ingredient> ingredients = new HashSet<>();
+
+    public Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public void setDifficulty(Difficulty difficulty) {
+        this.difficulty = difficulty;
+    }
 
     public Set<Ingredient> getIngredients() {
         return ingredients;
